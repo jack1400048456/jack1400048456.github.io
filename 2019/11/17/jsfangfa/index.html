@@ -5,14 +5,19 @@
   
 
   
-  <title>静羡的Blog</title>
+  <title>js原生方法复习 | 静羡的Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="静羡的Blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+  <meta name="description" content="apply() call() bind()这三个函数均是用来指定this指向的对象，比如a.call(b)就是将a对象放到b的环境中使用，三者均可以如此使用，并且均可带多个参数，而三者不同点则是apply()后传入的必须是数组a.apply(b,[])。bind()返回的则是一个函数，必须继续调用a.bind(b)()。  &#x2F;&#x2F;如果在call() apply()中传入的第一个参数是null则thi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js原生方法复习">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;17&#x2F;jsfangfa&#x2F;index.html">
 <meta property="og:site_name" content="静羡的Blog">
+<meta property="og:description" content="apply() call() bind()这三个函数均是用来指定this指向的对象，比如a.call(b)就是将a对象放到b的环境中使用，三者均可以如此使用，并且均可带多个参数，而三者不同点则是apply()后传入的必须是数组a.apply(b,[])。bind()返回的则是一个函数，必须继续调用a.bind(b)()。  &#x2F;&#x2F;如果在call() apply()中传入的第一个参数是null则thi">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;ftp.bmp.ovh&#x2F;imgs&#x2F;2019&#x2F;11&#x2F;fa36c692a920ea41.png">
+<meta property="og:updated_time" content="2019-11-17T11:46:43.294Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;ftp.bmp.ovh&#x2F;imgs&#x2F;2019&#x2F;11&#x2F;fa36c692a920ea41.png">
   
     <link rel="alternate" href="/atom.xml" title="静羡的Blog" type="application/atom+xml">
   
@@ -63,9 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-jsfangfa" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-jsfangfa" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/17/jsfangfa/" class="article-date">
   <time datetime="2019-11-17T05:28:14.000Z" itemprop="datePublished">2019-11-17</time>
@@ -78,8 +81,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/17/jsfangfa/">js原生方法复习</a>
+    <h1 class="article-title" itemprop="name">
+      js原生方法复习
     </h1>
   
 
@@ -103,55 +106,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-first" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/10/first/" class="article-date">
-  <time datetime="2019-11-10T05:16:14.219Z" itemprop="datePublished">2019-11-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/10/first/">first</a>
-    </h1>
+    <a href="/2019/11/10/first/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">first</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>#前端 #<br>date: 2019-11-10 13:16:14</p>
-<h2 id="小demo"><a href="#小demo" class="headerlink" title="小demo"></a>小demo</h2><p>  一个月，关于一个英雄联盟的百科，终于完成了。</p>
-<p>技术栈Vue+node+mongo</p>
-<p>今天开始重构一波，平时还要上课，所以尽快赶在一个星期内重构一波。<br>项目中安装expre模块<code>npm i express@next</code></p>
-<p>在引用中运用一个小技巧<code>app.use(&#39;./routes/admin&#39;)(app)</code><br>这个时候app作为参数传递进去，就可以直接在admin文件夹下的index文件<br>导出时用app接受导出的参数</p>
-<p>通过mongoose来连接数据库<br><img src="https://i.imgur.com/KpA4Z70.png" alt=""></p>
-<p>通用CRUD动态接口，动态接受参数<br>！<a href="https://i.imgur.com/iPZk5wV.png" target="_blank" rel="noopener"></a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/10/first/" data-id="ck32xqn0r0001g4tucct2bnz1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
