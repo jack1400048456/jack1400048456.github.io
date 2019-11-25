@@ -5,19 +5,17 @@
   
 
   
-  <title>js原生方法复习 | 静羡的Blog</title>
+  <title>mianjing | 静羡的Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="apply() call() bind()这三个函数均是用来指定this指向的对象，比如a.call(b)就是将a对象放到b的环境中使用，三者均可以如此使用，并且均可带多个参数，而三者不同点则是apply()后传入的必须是数组a.apply(b,[])。bind()返回的则是一个函数，必须继续调用a.bind(b)()。  &#x2F;&#x2F;如果在call() apply()中传入的第一个参数是null则thi">
+  <meta name="description" content="html标签html标签语义化有什么好处1 html标签语义化后，即能够用正确的标签做正确的事 2 使得内容清晰，内容结构化，即使在没有css布局的情况下，这也是一个文档流布局，不至于太过影响观感。 3 搜索引擎也依赖html标签中关键字的权重，利于seo。 4 使得网站源码便于阅读，增加可维护性。 label的作用label标签 : 用于定义表单控制件之间的关系，比如当用户点击标签时，自动焦点到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js原生方法复习">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;17&#x2F;jsfangfa&#x2F;index.html">
+<meta property="og:title" content="mianjing">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;mianjing&#x2F;index.html">
 <meta property="og:site_name" content="静羡的Blog">
-<meta property="og:description" content="apply() call() bind()这三个函数均是用来指定this指向的对象，比如a.call(b)就是将a对象放到b的环境中使用，三者均可以如此使用，并且均可带多个参数，而三者不同点则是apply()后传入的必须是数组a.apply(b,[])。bind()返回的则是一个函数，必须继续调用a.bind(b)()。  &#x2F;&#x2F;如果在call() apply()中传入的第一个参数是null则thi">
+<meta property="og:description" content="html标签html标签语义化有什么好处1 html标签语义化后，即能够用正确的标签做正确的事 2 使得内容清晰，内容结构化，即使在没有css布局的情况下，这也是一个文档流布局，不至于太过影响观感。 3 搜索引擎也依赖html标签中关键字的权重，利于seo。 4 使得网站源码便于阅读，增加可维护性。 label的作用label标签 : 用于定义表单控制件之间的关系，比如当用户点击标签时，自动焦点到">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;ftp.bmp.ovh&#x2F;imgs&#x2F;2019&#x2F;11&#x2F;fa36c692a920ea41.png">
-<meta property="og:updated_time" content="2019-11-17T11:46:43.294Z">
+<meta property="og:updated_time" content="2019-11-22T13:29:07.620Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;ftp.bmp.ovh&#x2F;imgs&#x2F;2019&#x2F;11&#x2F;fa36c692a920ea41.png">
   
     <link rel="alternate" href="/atom.xml" title="静羡的Blog" type="application/atom+xml">
   
@@ -68,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-jsfangfa" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-mianjing" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/17/jsfangfa/" class="article-date">
-  <time datetime="2019-11-17T05:28:14.000Z" itemprop="datePublished">2019-11-17</time>
+    <a href="/2019/11/22/mianjing/" class="article-date">
+  <time datetime="2019-11-22T12:48:45.000Z" itemprop="datePublished">2019-11-22</time>
 </a>
     
   </div>
@@ -82,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js原生方法复习
+      mianjing
     </h1>
   
 
@@ -90,17 +88,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="apply-call-bind"><a href="#apply-call-bind" class="headerlink" title="apply() call() bind()"></a>apply() call() bind()</h1><p>这三个函数均是用来指定this指向的对象，比如<code>a.call(b)</code>就是将a对象放到b的环境中使用，三者均可以如此使用，并且均可带多个参数，而三者不同点则是apply()后传入的必须是数组<code>a.apply(b,[])</code>。bind()返回的则是一个函数，必须继续调用<code>a.bind(b)()</code>。</p>
-<p> //如果在call() apply()中传入的第一个参数是null则this指向的对象是window</p>
-<h1 id="this的指定向问题"><a href="#this的指定向问题" class="headerlink" title="this的指定向问题"></a>this的指定向问题</h1><p>对于this的指向问题，首先要说的是this的指向是不确定的，当某个对象调用它的时候，那么this就会指向调用它的对象。比如<br><img src="https://ftp.bmp.ovh/imgs/2019/11/fa36c692a920ea41.png" alt=""></p>
-<p>在这里可以表明如果一个函数中有this，这个函数有被上一级的对象所调用，那么this指向的就是上一级的对象</p>
-<p>并且<strong>如果一个函数中有this，这个函数中包含多个对象，尽管这个函数是被最外层的对象所调用，this指向的也只是它上一级的对象</strong></p>
-<p>而在实际中，如果在一个函数中又this，但是它没有被上一级的对象所调用，那么这个this就是指向的window</p>
+        <h1 id="html标签"><a href="#html标签" class="headerlink" title="html标签"></a>html标签</h1><h2 id="html标签语义化有什么好处"><a href="#html标签语义化有什么好处" class="headerlink" title="html标签语义化有什么好处"></a>html标签语义化有什么好处</h2><p>1 html标签语义化后，即能够用正确的标签做正确的事</p>
+<p>2 使得内容清晰，内容结构化，即使在没有css布局的情况下，这也是一个文档流布局，不至于太过影响观感。</p>
+<p>3 搜索引擎也依赖html标签中关键字的权重，利于seo。</p>
+<p>4 使得网站源码便于阅读，增加可维护性。</p>
+<h2 id="label的作用"><a href="#label的作用" class="headerlink" title="label的作用"></a>label的作用</h2><p>label标签 : 用于定义表单控制件之间的关系，比如当用户点击标签时，自动焦点到绑定的表单上去。</p>
+<p>有两种用法，一种是id绑定 一种是嵌套<br><code>label for=&quot;Name&quot;&gt;Number:&lt;/label&gt;</code><br><code>&lt;input type=“text“name=&quot;Name&quot; id=&quot;Name&quot;/&gt;</code><br><code>&lt;label&gt;Date:&lt;input type=&quot;text&quot; name=&quot;B&quot;/&gt;&lt;/label&gt;</code></p>
+<h2 id="HTML与XHTML二者有什么区别，二者使用哪一个并说明理由"><a href="#HTML与XHTML二者有什么区别，二者使用哪一个并说明理由" class="headerlink" title="HTML与XHTML二者有什么区别，二者使用哪一个并说明理由"></a>HTML与XHTML二者有什么区别，二者使用哪一个并说明理由</h2><p>应该使用XHTML 因为xhtml重写了html，是html更加规范的写法。例如</p>
+<p>1 xml中任何一个标签都应该有一个结束标签</p>
+<p>2 xml中严禁在注释中写’–’</p>
+<p>3 xml标签中应有合理的嵌套 </p>
+<p>4 xml中所有的元素与属性都应使用小写</p>
+<p>5 xml中属性都应用引号‘’包裹</p>
+<h2 id="表单关闭自动填充"><a href="#表单关闭自动填充" class="headerlink" title="表单关闭自动填充"></a>表单关闭自动填充</h2><p>将from或者input标签的autocomplete设置为off</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/17/jsfangfa/" data-id="ck3ek54d60004l4tu4wybfpqz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/22/mianjing/" data-id="ck3ek54d60003l4tu6vgpblbk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -109,19 +114,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/11/22/mianjing/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/22/js-mianjing/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          mianjing
+          js基础面经
         
       </div>
     </a>
   
   
-    <a href="/2019/11/10/first/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/17/jsfangfa/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">first</div>
+      <div class="article-nav-title">js原生方法复习</div>
     </a>
   
 </nav>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>js基础面经 | 静羡的Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="js基础require和import的区别两者的加载方式不同，规范不同，require是在运行时加载，而import是在编译时加载，require（.&#x2F;a)()此时导入的模块是一个函数，类比即也可导入一个对象或一个数组。import * from &amp;quot;.&#x2F;a&amp;quot;一般用在开头。并且规范不同，require是Commonjs规范，import是es6规范 对于闭包的理解？优缺点？概念：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js基础面经">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;js-mianjing&#x2F;index.html">
+<meta property="og:site_name" content="静羡的Blog">
+<meta property="og:description" content="js基础require和import的区别两者的加载方式不同，规范不同，require是在运行时加载，而import是在编译时加载，require（.&#x2F;a)()此时导入的模块是一个函数，类比即也可导入一个对象或一个数组。import * from &amp;quot;.&#x2F;a&amp;quot;一般用在开头。并且规范不同，require是Commonjs规范，import是es6规范 对于闭包的理解？优缺点？概念：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;ftp.bmp.ovh&#x2F;imgs&#x2F;2019&#x2F;11&#x2F;08ba6f12cf4d1fda.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;ftp.bmp.ovh&#x2F;imgs&#x2F;2019&#x2F;11&#x2F;8a30a80de76e507e.png">
+<meta property="og:updated_time" content="2019-11-25T14:59:16.895Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;ftp.bmp.ovh&#x2F;imgs&#x2F;2019&#x2F;11&#x2F;08ba6f12cf4d1fda.png">
+  
+    <link rel="alternate" href="/atom.xml" title="静羡的Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">静羡的Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">小白的叙事之路</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js-mianjing" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/22/js-mianjing/" class="article-date">
+  <time datetime="2019-11-22T13:37:01.000Z" itemprop="datePublished">2019-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js基础面经
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="js基础"><a href="#js基础" class="headerlink" title="js基础"></a>js基础</h1><h2 id="require和import的区别"><a href="#require和import的区别" class="headerlink" title="require和import的区别"></a>require和import的区别</h2><p>两者的加载方式不同，规范不同，require是在运行时加载，而import是在编译时加载，<code>require（./a)()</code>此时导入的模块是一个函数，类比即也可导入一个对象或一个数组。<code>import * from &quot;./a&quot;</code>一般用在开头。<br>并且规范不同，require是Commonjs规范，import是es6规范</p>
+<h2 id="对于闭包的理解？优缺点？"><a href="#对于闭包的理解？优缺点？" class="headerlink" title="对于闭包的理解？优缺点？"></a>对于闭包的理解？优缺点？</h2><p>概念：闭包就是能够读取其他函数内部变量的函数</p>
+<p>特性：</p>
+<ol>
+<li>函数嵌套函数</li>
+<li>函数内部可以引用外部的参数和变量</li>
+<li>参数以及变量不会被垃圾回收机制回收</li>
+</ol>
+<p>优点：</p>
+<ol>
+<li>希望一个变量长期储存在内存当中</li>
+<li>避免全局变量的污染</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>使用不当易造成内存泄露</li>
+<li>常驻内存，增加内存使用量</li>
+</ol>
+<h2 id="javascript-的-typeof-返回哪些数据类型"><a href="#javascript-的-typeof-返回哪些数据类型" class="headerlink" title="javascript 的 typeof 返回哪些数据类型"></a>javascript 的 typeof 返回哪些数据类型</h2><p>string number boolea objec undefin function 以及es6新增数据类型symbol</p>
+<h2 id="一次-js-请求一般情况下有哪些地方会有缓存处理"><a href="#一次-js-请求一般情况下有哪些地方会有缓存处理" class="headerlink" title="一次 js 请求一般情况下有哪些地方会有缓存处理"></a>一次 js 请求一般情况下有哪些地方会有缓存处理</h2><p>cnd缓存处理 dns缓存处理，浏览器缓存，服务器缓存。</p>
+<h2 id="js哪些操作会引起内存泄露"><a href="#js哪些操作会引起内存泄露" class="headerlink" title="js哪些操作会引起内存泄露"></a>js哪些操作会引起内存泄露</h2><ol>
+<li>未声明变量的引用会在全局对象中创建一个新的变量，例如：<br><img src="https://ftp.bmp.ovh/imgs/2019/11/08ba6f12cf4d1fda.png" alt=""></li>
+<li>闭包引起的内存泄漏，闭包可以维持函数内部局部变量，使其得不到释放，解决方法，将事件处理函数，放到外部，或者事件处理函数外部，删除对dom的应用<br><img src="https://ftp.bmp.ovh/imgs/2019/11/8a30a80de76e507e.png" alt=""></li>
+</ol>
+<h2 id="js-常见数组方法"><a href="#js-常见数组方法" class="headerlink" title="js 常见数组方法"></a>js 常见数组方法</h2><ol>
+<li>splice，会直接与数组进行修改 array.splice(index,howmany,item1) index(必须)添加/删除的位置，howmany(必须)删除的数量，数量为0则不删除，item1要添加的新项目</li>
+<li>slice，返回一个指定的数组，array.slice(start,end)，start(必须)如果为负数，则从数组尾部开始算起，-1指向最后一个元素，end(如果没有这个参数，则从start到最后)</li>
+<li>join，将数组中的所有元素放入一个字符串，array.join(separator)separator为所拼接的分隔符，如省略则默认使用逗号</li>
+<li>split，用于将一个字符串分割成一个字符串数组string.split(separator,howmany),separator(为字符串或者正则表达式，从该参数指定的地方开始分割),howmany(可选，返回的子串不会超过指定的数组，如没有指定则整个数组都会被分割)</li>
+<li>filter，</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/22/js-mianjing/" data-id="ck3ek54ca0000l4tuerj1ch8e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/23/css-mianjing/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          css-mianjing
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/22/mianjing/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mianjing</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/23/css-mianjing/">css-mianjing</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/22/js-mianjing/">js基础面经</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/22/mianjing/">mianjing</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/17/jsfangfa/">js原生方法复习</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/10/first/">first</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 静羡<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
