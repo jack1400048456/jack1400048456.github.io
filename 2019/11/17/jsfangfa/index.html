@@ -15,7 +15,7 @@
 <meta property="og:description" content="apply() call() bind()这三个函数均是用来指定this指向的对象，比如a.call(b)就是将a对象放到b的环境中使用，三者均可以如此使用，并且均可带多个参数，而三者不同点则是apply()后传入的必须是数组a.apply(b,[])。bind()返回的则是一个函数，必须继续调用a.bind(b)()。  &#x2F;&#x2F;如果在call() apply()中传入的第一个参数是null则thi">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;ftp.bmp.ovh&#x2F;imgs&#x2F;2019&#x2F;11&#x2F;fa36c692a920ea41.png">
-<meta property="og:updated_time" content="2019-11-17T11:46:43.294Z">
+<meta property="og:updated_time" content="2019-11-26T14:25:36.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;ftp.bmp.ovh&#x2F;imgs&#x2F;2019&#x2F;11&#x2F;fa36c692a920ea41.png">
   
@@ -96,11 +96,16 @@
 <p>在这里可以表明如果一个函数中有this，这个函数有被上一级的对象所调用，那么this指向的就是上一级的对象</p>
 <p>并且<strong>如果一个函数中有this，这个函数中包含多个对象，尽管这个函数是被最外层的对象所调用，this指向的也只是它上一级的对象</strong></p>
 <p>而在实际中，如果在一个函数中又this，但是它没有被上一级的对象所调用，那么这个this就是指向的window</p>
+<h2 id="js数组深度拷贝"><a href="#js数组深度拷贝" class="headerlink" title="js数组深度拷贝"></a>js数组深度拷贝</h2><ol>
+<li>concat，slice针对单层数组嵌套的深拷贝<code>var ary2=ary1.concat()</code></li>
+<li>借用json对象的parse和stringify，除此之外，还可以结合locaStorage进行数组对象存储<a href="https://www.cnblogs.com/echolun/p/9088189.html" target="_blank" rel="noopener">https://www.cnblogs.com/echolun/p/9088189.html</a>详情见</li>
+<li>通过es6 …运算符<code>var ary2 = [...ary1];</code><br>以及<code>var [...ary2] = ary1</code></li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/17/jsfangfa/" data-id="ck3flak5a0003jotu35p01adx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/17/jsfangfa/" data-id="ck3iq89gq0003u4tu03hb10vl" class="article-share-link">Share</a>
       
       
     </footer>
